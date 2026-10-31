@@ -2,6 +2,8 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RecipeModel } from './models';
 import { MOCK_RECIPES } from './mock-recipes';
+import { computed } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -13,14 +15,15 @@ export class App {
   protected readonly title = signal('My Recipe Box');
   protected readonly recipe = signal<RecipeModel>(MOCK_RECIPES[0]);
   protected readonly servings = signal<number>(1);
+  protected readonly adjustedIngredients = computed(() => {
+    const currentRecipe = this.recipe();
+    const currentServings = this.servings();
 
-  protected pauseMedia(): void{
-    console.log(`Sua mídia foi pausada até você clicar em "Iniciar"`);
-  }
-
-  protected playMedia(): void {
-    console.log(`Sua mídia foi iniciada, você pode pausar ela clicando em "Pausar"`);
-  }
+    return currentRecipe.ingredients.map(ingredient => ({
+      ...ingredient,
+      quantity: ingredient.quantity * currentServings,
+    }));
+  });
 
   protected switchRecipe(): void {
     this.recipe.set(MOCK_RECIPES[1]);
