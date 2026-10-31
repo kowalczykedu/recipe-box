@@ -1,0 +1,8 @@
+<button (click)="backRecipe()">Voltar para a receita anterior</button>
+<button (click)="switchRecipe()">Próxima receita</button>
+
+@if (recipe().isFavorite) {
+  <p class="favorite-badge">⭐ Receita Favorita dos Chefes!</p>
+}
+
+<app-recipe-detail [recipe]="recipe()"></app-recipe-detail>

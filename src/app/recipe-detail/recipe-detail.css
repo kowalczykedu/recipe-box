@@ -1,0 +1,69 @@
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333333;
+}
+
+.recipe-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #1a1a1a;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.recipe-card p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #555555;
+  margin: 0 0 16px 0;
+}
+
+.recipe-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 0 8px 0;
+  color: #222222;
+}
+
+.recipe-card ul {
+  padding-left: 20px;
+  margin: 0 0 20px 0;
+}
+
+.recipe-card li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.recipe-card button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.recipe-card button:hover {
+  background-color: #1b5e20;
+}
