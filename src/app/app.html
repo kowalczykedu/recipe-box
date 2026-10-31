@@ -2,3 +2,8 @@
 
 <button (click)="playMedia()">Iniciar</button>
 <button (click)="pauseMedia()">Pausar</button>
+
+<h3>{{recipe().name}}</h3>
+<p>{{recipe().description}}</p>
+<button (click)="trocarReceita()">Próxima receita</button>
+<button (click)="voltarReceita()">Voltar para a receita anterior</button>
