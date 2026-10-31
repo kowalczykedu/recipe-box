@@ -5,5 +5,9 @@
 
 <h3>{{recipe().name}}</h3>
 <p>{{recipe().description}}</p>
-<button (click)="trocarReceita()">Próxima receita</button>
-<button (click)="voltarReceita()">Voltar para a receita anterior</button>
+<button (click)="switchRecipe()">Próxima receita</button>
+<button (click)="backRecipe()">Voltar para a receita anterior</button>
+
+<p>Porções: {{servings()}}</p>
+<button (click)="incrementServings()">Adicionar Porção</button>
+<button (click)="decrementServing()">Retirar Porção</button>
